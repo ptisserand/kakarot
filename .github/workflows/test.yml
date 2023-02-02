@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   compilation-tests:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest 
     container: alpine:3 
     env:
       CI_COMMIT_MESSAGE: CI Formatting Auto Commit
