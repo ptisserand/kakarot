@@ -4,7 +4,8 @@ on: [push, pull_request]
 
 jobs:
   compilation-tests:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    container: alpine:3 
     env:
       CI_COMMIT_MESSAGE: CI Formatting Auto Commit
       CI_COMMIT_AUTHOR: ${{ github.event.repository.name }} CI
